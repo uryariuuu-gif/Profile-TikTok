@@ -77,17 +77,17 @@ svg{display:block}
 
 .ico svg{width:100%;height:100%}
 .bgv,.shade,.fade{pointer-events:none;display:none;position:absolute;left:0;top:0;width:1080px;object-fit:cover;background:#000}
-#prof .bgv{height:520px}#prof .fade{height:530px}
-#prof .fade{background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 18%,#fff 49%)}
+#prof .bgv{height:600px}#prof .fade{height:610px}
+#prof .fade{background:linear-gradient(180deg,rgba(255,255,255,.12) 0,rgba(255,255,255,.55) 30%,rgba(255,255,255,.75) 43%,#fff 53.6%)}
 #edit .bgv,#edit .shade{height:288px}
 #edit .shade{background:rgba(0,0,0,.28)}
 .hasbg .bgv,.hasbg .shade,.hasbg .fade{display:block}
 .hasbg #prof .ico{background:rgba(0,0,0,.42);color:#fff;border-radius:50%;padding:16px;width:80px;height:80px;top:64px}
-.hasbg .title{opacity:0}.hasbg .back{color:#fff}
+.hasbg .title{opacity:0}.hasbg #prof .name{color:#0b0b0e}.hasbg #prof .ico[style*="left:868px"],.hasbg #prof .ico[style*="left:40px"]{padding:11px}.hasbg #prof .ico{padding:14px}.hasbg #prof .ico[style*="left:868px"]{left:866px!important}.hasbg #prof .ico[style*="left:40px"]{left:30px!important}.hasbg .back{color:#fff}
 .cbg{right:36px;top:120px;height:68px;padding:0 22px;border-radius:34px;background:#e9e9eb;color:#0b0b0e;font-size:32px;font-weight:700;z-index:6;white-space:nowrap}
-.hasbg .cbg{background:rgba(0,0,0,.38);color:#fff}
+.hasbg .cbg{background:rgba(0,0,0,.38);color:#fff}.cbg{transition:opacity .2s}.nocbg .cbg{opacity:0;pointer-events:none}
 .stage *{letter-spacing:-.04em}
-.stage .un{letter-spacing:-.005em}.stage .empty p{letter-spacing:-.015em}.stage .up{letter-spacing:-.07em}.stage .title{letter-spacing:-.01em}.stage .sec{letter-spacing:.015em}.stage .name,.stage .name *{letter-spacing:-.028em}.stage .stats span{letter-spacing:-.005em}.stage .bio,.stage .bio *{letter-spacing:0}.stage .row,.stage .row *{letter-spacing:-.005em}.stage .chg{letter-spacing:-.01em}.hasbg #prof .ico{transform:none!important}.hasbg #prof .ico.ft{left:758px!important;top:64px!important;width:80px!important;height:80px!important}
+.stage .un{letter-spacing:-.005em}.stage .empty p{letter-spacing:-.015em}.stage .up{letter-spacing:-.07em}.stage .title{letter-spacing:-.01em}.stage .sec{letter-spacing:.015em}.stage .name,.stage .name *{letter-spacing:-.028em}.stage .stats span{letter-spacing:-.005em}.stage .bio,.stage .bio *{letter-spacing:0}.stage .row,.stage .row *{letter-spacing:-.005em}.stage .chg{letter-spacing:-.01em}.hasbg #prof .ico{transform:none!important}.hasbg #prof .ico.ft{left:762px!important;top:64px!important;width:80px!important;height:80px!important;padding:9px!important}
 .tabs svg{width:78px;height:78px}
 </style>
 </head>
@@ -129,7 +129,7 @@ svg{display:block}
   <button class="a back" onclick="closeEdit()" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4.500l-7.500 7.500 7.500 7.500"/></svg></button>
   <div class="a title">Edit profile</div>
   <div class="a big"><img id="bigimg" alt=""><span class="cam"><i></i></span></div>
-  <button class="a chg">Change photo</button>
+  <button class="a chg" onclick="document.getElementById('edit').classList.toggle('nocbg')">Change photo</button>
   <div class="a card" style="top:670px;height:455px;padding-top:11px">
    <label class="row"><span class="l">Name</span><input id="iname" value="Kai Reed" maxlength="30"><svg class="ch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M8 4l8 8-8 8"/></svg></label>
    <label class="row"><span class="l">Username</span><input id="iuser" value="kai.reed9" maxlength="24"><svg class="ch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M8 4l8 8-8 8"/></svg></label>
