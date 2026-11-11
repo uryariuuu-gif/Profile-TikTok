@@ -113,7 +113,7 @@ svg{display:block}
 .mvx{}
 #prof .name,#prof .un,#prof .stats,#prof .avw,#prof .bio,#prof .tabs,#prof .empty,#grid{transform:translateY(var(--pl,0px));transition:transform .3s}
 .pulling #prof .name,.pulling #prof .un,.pulling #prof .stats,.pulling #prof .avw,.pulling #prof .bio,.pulling #prof .tabs,.pulling #prof .empty,.pulling #grid{transition:none}
-.dots{position:absolute;left:540px;top:calc(var(--pl,0px) + 70px);width:0;height:0;z-index:25;opacity:0;pointer-events:none;transition:top .3s,opacity .25s}.pulling .dots{transition:none}
+.dots{position:absolute;left:540px;top:calc(var(--pl,0px) + 92px);width:0;height:0;z-index:25;opacity:0;pointer-events:none;transition:top .3s,opacity .25s}.pulling .dots{transition:none}
 .dots i{position:absolute;top:-17px;width:34px;height:34px;border-radius:50%;mix-blend-mode:multiply}
 .dots i:nth-child(1){background:#fe2c55;animation:da .7s ease-in-out infinite alternate}.dots i:nth-child(2){background:#20d5ec;animation:db .7s ease-in-out infinite alternate}
 @keyframes da{from{left:-34px}to{left:-3px}}@keyframes db{from{left:-3px}to{left:-34px}}
@@ -205,7 +205,7 @@ function openPick(){var g=$('pgrid');g.innerHTML='';[{type:'video',def:1}].conca
 function closePick(){P.classList.remove('picking')}
 $('fb').onchange=function(){var f=this.files[0];if(f)useBanner({type:ty(f),blob:f});this.value=''};
 $('fp').onchange=function(){var f=this.files[0];if(f){posts.push({type:ty(f),blob:f});kvSet('posts',posts);renderGrid()}this.value=''};
-function refresh(){var s=$('stage'),d=$('dots');s.style.setProperty('--pl','230px');d.style.opacity=1;setTimeout(function(){kvGet('posts').then(function(p){if(p){posts=p;renderGrid()}});var v=$('prof').querySelector('video.bgv');if(v){v.currentTime=0;var r=v.play();if(r&&r.catch)r.catch(function(){})}s.style.setProperty('--pl','0px');d.style.opacity=0},1100)}
+function refresh(){var s=$('stage'),d=$('dots');s.style.setProperty('--pl','210px');d.style.opacity=1;setTimeout(function(){kvGet('posts').then(function(p){if(p){posts=p;renderGrid()}});var v=$('prof').querySelector('video.bgv');if(v){v.currentTime=0;var r=v.play();if(r&&r.catch)r.catch(function(){})}s.style.setProperty('--pl','0px');d.style.opacity=0},650)}
 (function(){var st=$('stage'),y0=null,pl=0,d=$('dots');
  function k(){return 1080/st.getBoundingClientRect().width}
  $('prof').addEventListener('pointerdown',function(e){if(P.classList.contains('editing')||e.target.closest('#grid'))return;y0=e.clientY});
